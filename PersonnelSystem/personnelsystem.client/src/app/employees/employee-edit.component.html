@@ -1,0 +1,72 @@
+<div class="edit-employee">
+  <h2 style="text-align: center" class="form-contents">Add New Employee</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-checkbox class="form-contents"
+                  [formControl]="managerRequiredControl"
+                  [(ngModel)]="isManager">Employee is a Manager</mat-checkbox>
+
+    <mat-form-field [hideRequiredMarker]="hideRequired()">
+      <mat-label>Manager</mat-label>
+      <mat-select [(value)]="selectedManagerId"
+                  formControlName="managerId"
+                  [required]="!hideRequired() ? true : false"
+                  canSelectNullableOptions="true">
+        <mat-option [value]="null"></mat-option>
+        <mat-option *ngFor="let manager of managers"
+                    [value]="manager.employeeId">
+          {{ manager.firstName }} {{ manager.lastName }} ID:{{
+            manager.employeeId
+          }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Employee ID:</mat-label>
+      <input type="number" matInput formControlName="employeeId" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>First Name:</mat-label>
+      <input matInput type="text" formControlName="firstName" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Last Name:</mat-label>
+      <input matInput
+             matInput
+             type="text"
+             formControlName="lastName"
+             required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Role(s):</mat-label>
+      <mat-select [(value)]="selectedRoles"
+                  multiple
+                  formControlName="roles"
+                  required>
+        <mat-option *ngFor="let role of roles" [value]="role.roleId">
+          {{
+          role.name
+          }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="form-contents" style="display: flex; justify-content: center">
+      <button style="margin: 10px"
+              mat-flat-button
+              type="submit"
+              [disabled]="!form.valid">
+        Submit
+      </button>
+      <button style="margin: 10px"
+              mat-flat-button
+              [routerLink]="['/employees']">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
