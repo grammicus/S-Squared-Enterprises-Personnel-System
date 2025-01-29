@@ -1,32 +1,45 @@
-<div style="
+<div
+  style="
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  ">
-  <div style="
+  "
+>
+  <div
+    style="
       padding: 100px;
       justify-content: center;
       display: flex;
       flex-direction: column;
     "
-       class="form-contents">
-    <mat-form-field>
-      <mat-select [(value)]="selectedManagerId"
-                  (selectionChange)="onManagerChange()"
-                  canSelectNullableOptions=" ">
-        <mat-option></mat-option>
-        <mat-option *ngFor="let manager of managers"
-                    [value]="manager.employeeId">
-          {{ manager.firstName }} {{ manager.lastName }} ID:{{
-            manager.employeeId
-          }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    class="form-contents"
+  >
+    <div div class="form-contents" style="display: flex; flex-direction: row">
+      <p>Manager:</p>
+      <mat-form-field>
+        <mat-select
+          [(value)]="selectedManagerId"
+          (selectionChange)="onManagerChange()"
+          canSelectNullableOptions=" "
+        >
+          <mat-option></mat-option>
+          <mat-option
+            *ngFor="let manager of managers"
+            [value]="manager.employeeId"
+          >
+            {{ manager.firstName }} {{ manager.lastName }} ID:{{
+              manager.employeeId
+            }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-    <div *ngIf="selectedManagerId && employees.length"
-         style="justify-content: center">
+    <div
+      *ngIf="selectedManagerId && employees.length"
+      style="justify-content: center"
+    >
       <table mat-table [dataSource]="employees" [hidden]="!employees">
         <ng-container matColumnDef="employeeId">
           <th mat-header-cell *matHeaderCellDef>Employee ID</th>
@@ -52,9 +65,11 @@
       </div>
     </div>
     <div class="form-contents" style="display: flex; justify-content: center">
-      <button style="margin: 10px"
-              mat-flat-button
-              [routerLink]="['/add-employees']">
+      <button
+        style="margin: 10px"
+        mat-flat-button
+        [routerLink]="['/add-employees']"
+      >
         Add Employee
       </button>
     </div>
