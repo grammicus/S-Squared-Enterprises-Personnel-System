@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelSystem.Server", "PersonnelSystem.Server\PersonnelSystem.Server.csproj", "{F882A5EC-54E8-4F6A-91E5-C34BD2638F4D}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "personnelsystem.client", "personnelsystem.client\personnelsystem.client.esproj", "{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F882A5EC-54E8-4F6A-91E5-C34BD2638F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F882A5EC-54E8-4F6A-91E5-C34BD2638F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F882A5EC-54E8-4F6A-91E5-C34BD2638F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F882A5EC-54E8-4F6A-91E5-C34BD2638F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC62D3D-75F8-4E93-8D0D-A182A680ECD0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49B272A8-87F2-4712-9803-015EE1D9EB44}
+	EndGlobalSection
+EndGlobal
